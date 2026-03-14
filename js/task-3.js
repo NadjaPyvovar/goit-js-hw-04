@@ -1,0 +1,30 @@
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > value) {
+      filteredNumbers.push(numbers[i]);
+    }
+  }
+  return filteredNumbers;
+}
+
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+// Alternative with for ... of
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+//   return filteredNumbers;
+// }
+
+// Alternative with the method filter()
+// const filterArray = (numbers, value) => numbers.filter(number => number > value);
